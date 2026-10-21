@@ -41,13 +41,6 @@ jobs:
           tags: |
             ghcr.io/ralphbcab/microk8s-cicd-lab:latest
             ghcr.io/ralphbcab/microk8s-cicd-lab:${{ github.sha }}
-           - name: Update Kubernetes image
-        env:
-          IMAGE_TAG: ${{ github.sha }}
-        run: |
-          sed -i \
-            "s|image: ghcr.io/ralphbcab/microk8s-cicd-lab:.*|image: ghcr.io/ralphbcab/microk8s-cicd-lab:${IMAGE_TAG}|" \
-            kubernetes/deployment.yaml
 
       - name: Update Kubernetes image
         env:
