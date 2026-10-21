@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: ghcr.io/ralphbcab/microk8s-cicd-lab:latest
+          image: ghcr.io/ralphbcab/microk8s-cicd-lab:22b8ea883a849fb4eec3de76bf7f01f5bb4d4cda
           ports:
             - containerPort: 80
           resources:
